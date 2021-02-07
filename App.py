@@ -21,6 +21,11 @@ def addApp():
         label.pack()
 
 
+def runApps():
+    for app in apps:
+        os.startfile(app)  # opens all apps
+
+
 canvas = tk.Canvas(root, height=700, width=700,
                    bg="#263d42")  # styles the little window
 canvas.pack()  # makes canvas attached to root
@@ -32,7 +37,7 @@ openFile = tk.Button(root, text="Open File", padx=10,
                      pady=5, fg="#fff", bg="#263d42", command=addApp)
 openFile.pack()
 runApps = tk.Button(root, text="Run Apps", padx=10,
-                    pady=5, fg="#fff", bg="#263d42")
+                    pady=5, fg="#fff", bg="#263d42", command=runApps)
 runApps.pack()
 
 root.mainloop()  # opens a little window
