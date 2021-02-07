@@ -23,7 +23,7 @@ def addApp():
 
 def runApps():
     for app in apps:
-        os.startfile(app)  # opens all apps
+        os.startfile(app)  # opens all selected apps
 
 
 canvas = tk.Canvas(root, height=700, width=700,
@@ -41,3 +41,7 @@ runApps = tk.Button(root, text="Run Apps", padx=10,
 runApps.pack()
 
 root.mainloop()  # opens a little window
+
+with open("save.txt", "w") as f:
+    for app in apps:
+        f.write(app + ",")
