@@ -46,9 +46,6 @@ openFile.pack()
 runApps = tk.Button(root, text="Run Apps", padx=10,
                     pady=5, fg="#fff", bg="#263d42", command=runApps)
 runApps.pack()
-clearFiles = tk.Button(root, text="Close All", padx=10,
-                       pady=5, fg="#fff", bg="#263d42")
-clearFiles.pack()
 
 for app in apps:
     label = tk.Label(frame, text=app)
